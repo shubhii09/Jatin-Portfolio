@@ -1,0 +1,268 @@
+/* Projects Section */
+.projects {
+  margin: 3rem 0;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px dashed #6e6e6e;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.project-card {
+  display: flex;
+  gap: 1.5rem;
+  border: 1px dashed #333;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+  background: #000;
+}
+
+.project-card img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.project-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-stack span {
+  background: #111;
+  border: 1px solid #333;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  color: #bbb;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  border: 1px solid #444;
+  padding: 0.4rem 0.75rem;
+  text-decoration: none;
+  color: #ddd;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+  background: #111;
+  border-color: #666;
+  color: #fff;
+}
+
+.view-all {
+  text-align: right;
+}
+
+.view-all a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.view-all a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-card img {
+    width: 100%;
+  }
+}
+
+
+/*  now last section sharing what i learn */
+
+.blog-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 1rem;
+  color: #e5e5e5;
+  font-family: Arial, sans-serif;
+}
+
+/* blog heading  */
+
+
+  .blog-heading {
+  border: 1px dashed #6e6e6e;
+  padding: 0.75rem 1.25rem;
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  color: #fff;
+  background: black;
+  margin: 2rem 0;     /* 🔑 removes auto-centering, keeps spacing */
+  max-width: 90%;     
+  text-align: left;   /* text aligned to left */
+}
+
+/* Dots styling */
+.blog-heading::before,
+.blog-heading::after,
+.blog-heading span::before,
+.blog-heading span::after {
+  content: "";
+  position: absolute;
+  width: 8px;  
+  height: 8px;
+  background: #6e6e6e;
+  border-radius: 50%;
+}
+
+/* Top-left */
+.blog-heading::before {
+  top: -5px;
+  left: -5px;
+}
+
+/* Top-right */
+.blog-heading::after {
+  top: -5px;
+  right: -5px;
+}
+
+/* Bottom-left */
+.blog-heading span::before {
+  bottom: -5px;
+  left: -5px;
+}
+
+/* Bottom-right */
+.blog-heading span::after {
+  bottom: -5px;
+  right: -5px;
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 768px) {
+  .blog heading {
+    font-size: 0.9rem;   /* slightly smaller text */
+    padding: 0.5rem 1rem;
+  }
+  .blog-heading::before,
+  .blog-heading::after,
+  .blog-heading span::before,
+  .blog-heading span::after {
+    width: 6px;  /* smaller dots */
+    height: 6px;
+  }
+}
+
+/* impact box trext styling */
+.blog-heading span {
+  font-weight: 00;
+  font-size: large;
+  font: bold;
+  
+}
+
+/* blahhh */
+.blog-card {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+}
+
+.blog-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.blog-title:hover {
+  color: #ddd;
+}
+
+.blog-desc {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.blog-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.view-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #1a1a1a;
+  color: #ccc;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.2s;
+}
+
+.view-btn:hover {
+  background: #222;
+  border-color: #666;
+  color: #fff;
+}
+
+.cta-box {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px dashed #555;
+  background: #0a0a0a;
+  border-radius: 6px;
+}
+
+.cta-box strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.cta-box p {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.cta-box a {
+  color: #fff;
+  text-decoration: underline;
+}

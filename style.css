@@ -1,79 +1,246 @@
 /* Reset and base styles */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: #000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #000;
 }
+
+
+/* smoothh scrolll */
+html {
+  scroll-behavior: smooth;
+}
+
 
 /* font */
 
 @font-face {
-    font-family: 'IOT';                /* name you’ll use in CSS */
-    src: url('./assets/font/Oswald-Regular.ttf') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  /* Apply globally */
-  * {
-    font-family: 'IOT', sans-serif;
-  }
-  
-  
+  font-family: 'IOT';
+  /* name you’ll use in CSS */
+  src: url('./assets/font/Oswald-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply globally */
+* {
+  font-family: 'IOT', sans-serif;
+}
+
+
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
 nav {
-    position: relative;
-    padding: 1rem 2rem;
+  position: relative;
+  padding: 1rem 2rem;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex ;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo img {
-    height: 60px;
-    width: auto;
-    border-radius: 50%;
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
 }
 
 .navbar span {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 .navbar h2 {
-    color: #fff;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .navbar h2:hover {
-    color: #ccc;
+  color: #ccc;
 }
 
-/* container */
 
-/* Notebook-style centered layout */
+/* Container  */
 .container {
-    max-width: 800px;       /* notebook width */
-    width: 100%;
-    margin: 2rem auto;      /* center horizontally + spacing from top */
-    padding: 0 1rem;        /* small side padding */
-    border: 1px dashed #262626;   /* border-neutral-800 */
+  max-width: 700px;        /* column width */
+  width: 100%;
+  margin: 6rem 0 2rem 2rem; /* push down from navbar + left spacing */
+  padding: 2rem;
+  border-left: 1px dashed #6e6e6e;  /* only left border */
+  border-right: 1px dashed #575555; /* right border too if you want */
+  border-top: 1px dashed #6e6e6e;
+  border-bottom: 1px dashed #6e6e6e;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.hero h1.zero {
+  font-size: 2rem;
+  font-weight:100;
+  color: #fff;
+}
+
+.hero h3.first {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4f4e4e;
+}
+
+.hero h3.sec,
+.hero h3.third {
+  font-size: 1rem;
+  color: #6b6a6a;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    margin: 5rem 1rem 2rem 1rem; /* less side space */
+    padding: 1rem;
+  }
+
+  .hero h1.zero {
+    font-size: 1.6rem;
+  }
+
+  .hero h3.first {
+    font-size: 1rem;
+  }
+
+  .hero h3.sec,
+  .hero h3.third {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+}
+
+  .impact-box {
+  border: 1px dashed #6e6e6e;
+  padding: 0.75rem 1.25rem;
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  color: #fff;
+  background: black;
+  margin: 2rem 0;     /* 🔑 removes auto-centering, keeps spacing */
+  max-width: 90%;     
+  text-align: left;   /* text aligned to left */
+}
+
+/* Dots styling */
+.impact-box::before,
+.impact-box::after,
+.impact-box span::before,
+.impact-box span::after {
+  content: "";
+  position: absolute;
+  width: 8px;  
+  height: 8px;
+  background: #6e6e6e;
+  border-radius: 50%;
+}
+
+/* Top-left */
+.impact-box::before {
+  top: -5px;
+  left: -5px;
+}
+
+/* Top-right */
+.impact-box::after {
+  top: -5px;
+  right: -5px;
+}
+
+/* Bottom-left */
+.impact-box span::before {
+  bottom: -5px;
+  left: -5px;
+}
+
+/* Bottom-right */
+.impact-box span::after {
+  bottom: -5px;
+  right: -5px;
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 768px) {
+  .impact-box {
+    font-size: 0.9rem;   /* slightly smaller text */
+    padding: 0.5rem 1rem;
+  }
+  .impact-box::before,
+  .impact-box::after,
+  .impact-box span::before,
+  .impact-box span::after {
+    width: 6px;  /* smaller dots */
+    height: 6px;
+  }
+}
+
+/* impact box trext styling */
+.impact-box span {
+  font-weight: 00;
+  font-size: large;
+  font: bold;
+  
+}
+
+
+.research-section {
+    display: flex;              /* side by side */
+    align-items: center;        /* vertically align */
+    gap: 15px;                  /* space between text and image */
+}
+
+.research-section h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    
+}
+
+.research-section img {
+    width: 40px;                /* adjust image size */
+    height: auto;
+    border-radius: 8px;         /* optional */
+}
+
+.middle {
+  span{
+    color: white;
+  }
+  p{
+    color: #575656;
+  }
+
 }
 
 
@@ -81,81 +248,158 @@ nav {
 /* Responsive design */
 /* Keep nav/logo at top always */
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    background: #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    border-bottom: 1px solid #262626;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #262626;
 }
 
 .logo img {
-    height: 50px;
-    width: auto;
-    border-radius: 50%;
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
 }
 
 /* Navbar links normally */
 .navbar span {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 /* Links style */
 .navbar span h2 {
-    border: 1px dashed #262626;
-    padding: 0.25rem 0.375rem;
-    font-size: 0.875rem;
-    color: #a3a3a3;
-    transition: all 0.3s ease;
+  border: 1px dashed #262626;
+  padding: 0.25rem 0.375rem;
+  font-size: 0.875rem;
+  color: #a3a3a3;
+  transition: all 0.3s ease;
 }
 
 .navbar span h2:hover {
-    background-color: #171717;
-    border-color: #404040;
-    color: #e5e5e5;
+  background-color: #171717;
+  border-color: #404040;
+  color: #e5e5e5;
 }
 
 /* On mobile: move only links to bottom */
 
 /* On mobile */
 @media (max-width: 768px) {
-    .navbar span {
-        position: fixed;
-        bottom: 20px;
-        left: 50%; 
-        transform: translateX(-50%);
-        
-        background: #000;
-        border-top: 1px solid #262626;
-        padding: 10px 20px;
-        border-radius: 20px;
-        
-        display: flex;
-        gap: 1.5rem;
+  .navbar span {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-    }
+    background: #000;
+    border-top: 1px solid #262626;
+    padding: 10px 20px;
+    border-radius: 20px;
 
-    /* Individual links */
-    .navbar span h2 {
-        font-size: 1rem;
-        padding: 0.35rem 0.5rem;
-        display: inline-block;   /* 🔑 prevents parent from resizing */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+    display: flex;
+    gap: 1.5rem;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Individual links */
+  .navbar span h2 {
+    font-size: 1rem;
+    padding: 0.35rem 0.5rem;
+    display: inline-block;
+    /* 🔑 prevents parent from resizing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
   /* Glow effect + smooth pop on hover */
-.navbar span h2:hover {
-    box-shadow: 0 0 12px rgba(215, 236, 236, 0.6); /* softer glow */
-    transform: scale(1.05); /* gentle pop */
+  .navbar span h2:hover {
+    box-shadow: 0 0 12px rgba(215, 236, 236, 0.6);
+    /* softer glow */
+    transform: scale(1.05);
+    /* gentle pop */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
 }
 
+/* built box  */
+
+  .build-box {
+  border: 1px dashed #6e6e6e;
+  padding: 0.75rem 1.25rem;
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  color: #fff;
+  background: black;
+  margin: 2rem 0;     /* 🔑 removes auto-centering, keeps spacing */
+  max-width: 90%;     
+  text-align: left;   /* text aligned to left */
+}
+
+/* Dots styling */
+.build-box::before,
+.build-box::after,
+.build-box span::before,
+.build-box span::after {
+  content: "";
+  position: absolute;
+  width: 8px;  
+  height: 8px;
+  background: #6e6e6e;
+  border-radius: 50%;
+}
+
+/* Top-left */
+.build-box::before {
+  top: -5px;
+  left: -5px;
+}
+
+/* Top-right */
+.build-box::after {
+  top: -5px;
+  right: -5px;
+}
+
+/* Bottom-left */
+.build-box span::before {
+  bottom: -5px;
+  left: -5px;
+}
+
+/* Bottom-right */
+.build-box span::after {
+  bottom: -5px;
+  right: -5px;
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 768px) {
+  .build-box {
+    font-size: 0.9rem;   /* slightly smaller text */
+    padding: 0.5rem 1rem;
+  }
+  .build-box::before,
+  .build-box::after,
+  .build-box span::before,
+  .build-box span::after {
+    width: 6px;  /* smaller dots */
+    height: 6px;
+  }
+}
+
+/* impact box trext styling */
+.build-box span {
+  font-weight: 00;
+  font-size: large;
+  font: bold;
+  
 }
