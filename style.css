@@ -74,14 +74,13 @@ nav {
 }
 
 
-/* Container  */
 .container {
   max-width: 700px;        /* column width */
   width: 100%;
-  margin: 6rem 0 2rem 2rem; /* push down from navbar + left spacing */
+  margin: 6rem auto 2rem auto; /* center horizontally */
   padding: 2rem;
-  border-left: 1px dashed #6e6e6e;  /* only left border */
-  border-right: 1px dashed #575555; /* right border too if you want */
+  border-left: 1px dashed #6e6e6e;
+  border-right: 1px dashed #575555;
   border-top: 1px dashed #6e6e6e;
   border-bottom: 1px dashed #6e6e6e;
   display: flex;
@@ -89,6 +88,7 @@ nav {
   align-items: flex-start;
   box-sizing: border-box;
 }
+
 
 /* Hero section */
 .hero {
