@@ -13,6 +13,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* anchor style */
+a, a:visited, a:hover, a:active {
+  color: inherit;          /* same color as parent (like normal text) */
+  text-decoration: none;   /* no underline */
+  
+}
+
 
 /* font */
 
@@ -43,7 +50,7 @@ nav {
 }
 
 .navbar {
-  display: flex ;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
@@ -75,9 +82,11 @@ nav {
 
 
 .container {
-  max-width: 700px;        /* column width */
+  max-width: 700px;
+  /* column width */
   width: 100%;
-  margin: 6rem auto 2rem auto; /* center horizontally */
+  margin: 6rem auto 2rem auto;
+  /* center horizontally */
   padding: 2rem;
   border-left: 1px dashed #6e6e6e;
   border-right: 1px dashed #575555;
@@ -100,7 +109,7 @@ nav {
 
 .hero h1.zero {
   font-size: 2rem;
-  font-weight:100;
+  font-weight: 100;
   color: #fff;
 }
 
@@ -121,7 +130,8 @@ nav {
 /* Responsive */
 @media (max-width: 768px) {
   .container {
-    margin: 5rem 1rem 2rem 1rem; /* less side space */
+    margin: 5rem 1rem 2rem 1rem;
+    /* less side space */
     padding: 1rem;
   }
 
@@ -140,7 +150,7 @@ nav {
   }
 }
 
-  .impact-box {
+.impact-box {
   border: 1px dashed #6e6e6e;
   padding: 0.75rem 1.25rem;
   display: inline-block;
@@ -148,9 +158,11 @@ nav {
   font-size: 1rem;
   color: #fff;
   background: black;
-  margin: 2rem 0;     /* 🔑 removes auto-centering, keeps spacing */
-  max-width: 90%;     
-  text-align: left;   /* text aligned to left */
+  margin: 2rem 0;
+  /* 🔑 removes auto-centering, keeps spacing */
+  max-width: 90%;
+  text-align: left;
+  /* text aligned to left */
 }
 
 /* Dots styling */
@@ -160,7 +172,7 @@ nav {
 .impact-box span::after {
   content: "";
   position: absolute;
-  width: 8px;  
+  width: 8px;
   height: 8px;
   background: #6e6e6e;
   border-radius: 50%;
@@ -193,14 +205,17 @@ nav {
 /* 📱 Mobile adjustments */
 @media (max-width: 768px) {
   .impact-box {
-    font-size: 0.9rem;   /* slightly smaller text */
+    font-size: 0.9rem;
+    /* slightly smaller text */
     padding: 0.5rem 1rem;
   }
+
   .impact-box::before,
   .impact-box::after,
   .impact-box span::before,
   .impact-box span::after {
-    width: 6px;  /* smaller dots */
+    width: 6px;
+    /* smaller dots */
     height: 6px;
   }
 }
@@ -210,34 +225,40 @@ nav {
   font-weight: 00;
   font-size: large;
   font: bold;
-  
+
 }
 
 
 .research-section {
-    display: flex;              /* side by side */
-    align-items: center;        /* vertically align */
-    gap: 15px;                  /* space between text and image */
+  display: flex;
+  /* side by side */
+  align-items: center;
+  /* vertically align */
+  gap: 15px;
+  /* space between text and image */
 }
 
 .research-section h2 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: white;
-    
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+
 }
 
 .research-section img {
-    width: 40px;                /* adjust image size */
-    height: auto;
-    border-radius: 8px;         /* optional */
+  width: 40px;
+  /* adjust image size */
+  height: auto;
+  border-radius: 8px;
+  /* optional */
 }
 
 .middle {
-  span{
+  span {
     color: white;
   }
-  p{
+
+  p {
     color: #575656;
   }
 
@@ -331,7 +352,7 @@ nav {
 
 /* built box  */
 
-  .build-box {
+.build-box {
   border: 1px dashed #6e6e6e;
   padding: 0.75rem 1.25rem;
   display: inline-block;
@@ -339,9 +360,11 @@ nav {
   font-size: 1rem;
   color: #fff;
   background: black;
-  margin: 2rem 0;     /* 🔑 removes auto-centering, keeps spacing */
-  max-width: 90%;     
-  text-align: left;   /* text aligned to left */
+  margin: 2rem 0;
+  /* 🔑 removes auto-centering, keeps spacing */
+  max-width: 90%;
+  text-align: left;
+  /* text aligned to left */
 }
 
 /* Dots styling */
@@ -351,7 +374,7 @@ nav {
 .build-box span::after {
   content: "";
   position: absolute;
-  width: 8px;  
+  width: 8px;
   height: 8px;
   background: #6e6e6e;
   border-radius: 50%;
@@ -384,14 +407,17 @@ nav {
 /* 📱 Mobile adjustments */
 @media (max-width: 768px) {
   .build-box {
-    font-size: 0.9rem;   /* slightly smaller text */
+    font-size: 0.9rem;
+    /* slightly smaller text */
     padding: 0.5rem 1rem;
   }
+
   .build-box::before,
   .build-box::after,
   .build-box span::before,
   .build-box span::after {
-    width: 6px;  /* smaller dots */
+    width: 6px;
+    /* smaller dots */
     height: 6px;
   }
 }
@@ -401,5 +427,5 @@ nav {
   font-weight: 00;
   font-size: large;
   font: bold;
-  
+
 }

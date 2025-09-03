@@ -118,8 +118,7 @@
 
 /* blog heading  */
 
-
-  .blog-heading {
+.blog-heading {
   border: 1px dashed #6e6e6e;
   padding: 0.75rem 1.25rem;
   display: inline-block;
@@ -127,9 +126,11 @@
   font-size: 1rem;
   color: #fff;
   background: black;
-  margin: 2rem 0;     /* 🔑 removes auto-centering, keeps spacing */
-  max-width: 90%;     
-  text-align: left;   /* text aligned to left */
+  margin: 2rem 0;
+  /* 🔑 removes auto-centering, keeps spacing */
+  max-width: 90%;
+  text-align: left;
+  /* text aligned to left */
 }
 
 /* Dots styling */
@@ -139,7 +140,7 @@
 .blog-heading span::after {
   content: "";
   position: absolute;
-  width: 8px;  
+  width: 8px;
   height: 8px;
   background: #6e6e6e;
   border-radius: 50%;
@@ -171,15 +172,18 @@
 
 /* 📱 Mobile adjustments */
 @media (max-width: 768px) {
-  .blog heading {
-    font-size: 0.9rem;   /* slightly smaller text */
+  .blog-heading {
+    font-size: 0.9rem;
+    /* slightly smaller text */
     padding: 0.5rem 1rem;
   }
+
   .blog-heading::before,
   .blog-heading::after,
   .blog-heading span::before,
   .blog-heading span::after {
-    width: 6px;  /* smaller dots */
+    width: 6px;
+    /* smaller dots */
     height: 6px;
   }
 }
@@ -189,7 +193,7 @@
   font-weight: 00;
   font-size: large;
   font: bold;
-  
+
 }
 
 /* blahhh */

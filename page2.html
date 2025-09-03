@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects - Jatin Sharma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <!-- <link rel="stylesheet" href="project.css"> -->
+    <link rel="stylesheet" href="probout.css">
+    <link rel="stylesheet" href="page2.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- ✅ Navbar placeholder -->
+        <div id="navbar-placeholder"></div>
+
+        <!-- ✅ Page-specific content -->
+        <section class="blog-post">
+
+            <!-- Cover Image -->
+            <div class="blog-cover">
+                <img src="assets/tailwind-css-basics.webp" alt="Tailwind CSS">
+            </div>
+
+            <!-- Blog Content -->
+            <h1 class="blog-title">Tailwind CSS Basics: A Complete Beginner's Guide</h1>
+
+            <p class="blog-intro">
+                Tailwind CSS has revolutionized how developers approach styling web applications.
+                Unlike traditional CSS frameworks that provide pre-built components, Tailwind offers
+                utility-first classes that let you build custom designs without writing custom CSS.
+                In this guide, we’ll cover everything you need to know to get started with Tailwind CSS.
+            </p>
+
+            <!-- Section -->
+            <h2>What is Tailwind CSS?</h2>
+            <p>
+                <b>Tailwind CSS</b> is a utility-first CSS framework that provides low-level utility
+                classes to build custom designs directly in your markup. Instead of writing custom CSS,
+                you compose styles using predefined classes.
+            </p>
+
+            <h2>Traditional CSS vs Tailwind CSS</h2>
+            <pre><code>
+/* Traditional CSS */
+.button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+      </code></pre>
+
+            <pre><code>
+&lt;!-- Tailwind CSS --&gt;
+&lt;button class="bg-blue-500 text-white px-4 py-2 rounded font-semibold hover:bg-blue-600"&gt;
+  Click me
+&lt;/button&gt;
+      </code></pre>
+
+            <!-- Installation Section -->
+            <h2>Installation and Setup</h2>
+
+            <h3>1. Using CDN (Quick Start)</h3>
+            <p>For rapid prototyping, you can use the CDN:</p>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 class="text-3xl font-bold underline text-blue-600"&gt;
+    Hello Tailwind!
+  &lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+
+            <h3>2. Installing with npm</h3>
+            <p>For production projects:</p>
+            <pre><code>
+# Install Tailwind CSS
+npm install -D tailwindcss
+npx tailwindcss init
+
+# Configure your template paths in tailwind.config.js
+# Add Tailwind directives to your CSS
+      </code></pre>
+
+            <pre><code>
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+      </code></pre>
+
+            <!-- Core Utility Classes -->
+            <h2>Core Utility Classes</h2>
+
+            <h3>Layout Classes</h3>
+            <pre><code>
+&lt;!-- Display --&gt;
+&lt;div class="block"&gt;Block element&lt;/div&gt;
+&lt;div class="inline-block"&gt;Inline-block element&lt;/div&gt;
+&lt;div class="flex"&gt;Flexbox container&lt;/div&gt;
+&lt;div class="grid"&gt;Grid container&lt;/div&gt;
+&lt;div class="hidden"&gt;Hidden element&lt;/div&gt;
+      </code></pre>
+
+            <h1>Core Utility Classes</h1>
+            <h3>Layout Classes</h3>
+            <pre><code>
+        Display
+&lt;div class="block">Block element&lt;/div&gt;
+&lt;div class="inline-block">Inline-block element&lt;/div&gt;
+&lt;div class="flex">Flexbox container&lt;/div&gt;
+&lt;div class="grid">Grid container&lt;/div&gt;
+&lt;div class="hidden">Hidden element&lt;/div&gt;
+
+&lt;!-- Positioning --&gt;
+&lt;div class="relative"&gt;Relative positioning&lt;/div&gt;
+&lt;div class="absolute top-0 left-0"&gt;Absolute positioning&lt;/div&gt;
+&lt;div class="fixed bottom-4 right-4"&gt;Fixed positioning&lt;/div&gt;
+      </code></pre>
+
+
+            <h1>Flexbox Classes</h1>
+            <!-- <h3>Layout Classes</h3> -->
+            <pre><code>
+        
+&lt;div class="flex justify-center items-center h-screen"&gt;
+&lt;div class="bg-blue-500 text-white p-4">Centered content"&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Flex Direction --&gt;
+&lt;div class="flex flex-col">Vertical Layout&lt;/div&gt;
+&lt;div class="flex flex-row">Horizontal layout&lt;/div&gt;
+    
+&lt;!-- Flex Wrap --&gt;
+
+&lt;div class="flex flex-wrap">Wrapping items&lt;/div&gt;
+&lt;div class="flex flex-nowrap">No wrapping&lt;/div&gt;
+      </code></pre>
+
+
+
+
+      <h1>Typography</h1>
+      <h3>Text Styling</h3>
+                  <pre><code>
+<!-- Font Size -->
+
+&lt;h1 class="text-4xl">Extra large heading&lt;/h1
+h2 class="text-2xl">Large heading&lt;/h2
+p class="text-base">Normal text&lt;/p
+small class="text-sm">Small text&lt;/small
+
+&lt;!-- Font Weight --&gt;
+&lt;p class="font-light">Light text&lt;/p&gt;
+&lt;p class="font-normal">Normal text&lt;/p&gt;
+&lt;p class="font-semibold">Semi-bold text&lt;/p&gt;
+&lt;p class="font-bold">Bold text&lt;/p&gt;
+
+&lt;!-- Text Color --&gt;
+&lt;p class="text-gray-900">Dark text&lt;/p&gt;
+&lt;p class="text-blue-500">Blue text&lt;/p&gt;
+&lt;p class="text-red-600">Red text&lt;/p&gt;
+
+&lt;!-- Text Alignment --&gt;
+&lt;p class="text-left">Left aligned&lt;/p&gt;
+&lt;p class="text-center">Center aligned&lt;/p&gt;
+&lt;p class="text-right">Right aligned&lt;/p&gt;
+      </code></pre>
+
+
+
+
+
+        </section>
+    </div>
+
+    <!-- ✅ Script to inject navbar -->
+    <script src="navbar.js"></script>
+</body>
+
+</html>
