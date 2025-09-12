@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jatin Sharma</title>
+    <link rel="stylesheet" href="/main/style.css">
+    <link rel="stylesheet" href="/main/style2.css">
+    <link rel="stylesheet" href="/probout/probout.css">
+    <link rel="stylesheet" href="/contact/contact.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar placeholder -->
+        <div id="navbar-placeholder"></div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="intro">
+                <h1 class="zero">Let's Work Together</h1>
+            </div>
+            <h3 class="first">Ready to bring your ideas to life? I'm here to help you build something amazing.</h3>
+            <h3 class="sec">Whether you need a full-stack application, a sleek frontend, or just want to discuss your next project, I'd love to hear from you.</h3>
+        </div>
+
+        <!-- Contact Box -->
+        <div class="build-box">
+            <span>Get In Touch</span>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>jatinsharma.techy@gmail.com</p>
+                            <a href="mailto:jatinsharma.techy@gmail.com">Send me an email</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p>Connect with me professionally</p>
+                            <a href="#" target="_blank">Visit my LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🐙</div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <p>Check out my code</p>
+                            <a href="#" target="_blank">View my GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📄</div>
+                        <div class="contact-details">
+                            <h4>Resume</h4>
+                            <p>Download my resume</p>
+                            <a href="#" target="_blank">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Availability Section -->
+        <div class="build-box">
+            <span>Current Availability</span>
+        </div>
+
+        <div class="availability-section">
+            <div class="availability-card">
+                <div class="availability-status">
+                    <div class="status-dot available"></div>
+                    <span>Available for new projects</span>
+                </div>
+                <p>I'm currently accepting new freelance projects and full-time opportunities. Let's discuss how I can help bring your vision to life.</p>
+                <div class="availability-details">
+                    <div class="detail-item">
+                        <strong>Response Time:</strong> Within 24 hours
+                    </div>
+                    <div class="detail-item">
+                        <strong>Project Types:</strong> Web Apps, Full-Stack Development, Frontend Design
+                    </div>
+                    <div class="detail-item">
+                        <strong>Timeline:</strong> Flexible, depending on project scope
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h3>Ready to Start Your Project?</h3>
+            <p>Let's create something amazing together. Whether it's a simple website or a complex web application, I'm here to help you succeed.</p>
+            <div class="cta-buttons">
+                <a href="#contactForm" class="cta-btn primary">Start a Project</a>
+                <a href="mailto:jatinsharma.techy@gmail.com" class="cta-btn secondary">Send Email</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+   (function(){
+       emailjs.init("NKwdRkVcolYVYYuqZ");   // <-- put your real Public Key here
+   })();
+</script>
+
+    <script src="/navbar/navbar.js"></script>
+    <script src="/contact/contact.js"></script>
+</body>
+</html>
