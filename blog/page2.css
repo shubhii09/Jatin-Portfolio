@@ -6,12 +6,17 @@
   font-family: "Georgia", serif;
   line-height: 1.6;
 }
+.blog-post .blog-cover {
+  max-width: 100%;
+  margin: 0 0 2rem;
+}
 
-.blog-cover img {
+
+/* .blog-cover img {
   width: 100%;
   border-radius: 12px;
   margin-bottom: 2rem;
-}
+} */
 
 .blog-title {
   font-size: 2.2rem;
@@ -68,4 +73,48 @@ code {
   h2 { font-size: 1.1rem; }
   h3 { font-size: 1rem; }
   pre { font-size: 0.85rem; padding: 0.7rem; }
+}
+
+
+
+/* ===== Cover Image ===== */
+.blog-cover {
+  width: 100%;
+  max-width: 900px;       /* optional: keeps it from being too wide on big screens */
+  margin: 0 auto 2rem;    /* center and give space below */
+  overflow: hidden;
+  border-radius: 12px;    /* soft rounded corners */
+}
+/* 
+.blog-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;      
+}   */
+
+/* ===== List inside conclusion ===== */
+.blog-post ul {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;   /* classic bullets */
+}
+
+.blog-post li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgb(146, 148, 148);
+}
+
+
+/* ===== Specific styling for Tailwind image ===== */
+.tailwindimage {
+  display: block;        /* removes extra gaps below images */
+  width: 100%;           /* make it fill the wrapper */
+  max-width: 100%;       /* prevents overflow */
+  height: auto;          /* keep aspect ratio */
+  object-fit: cover;     /* crop nicely if parent has fixed height */
+  border-radius: 12px;   /* rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); /* optional soft shadow */
 }

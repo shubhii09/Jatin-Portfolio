@@ -2,34 +2,262 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Projects - Jatin Sharma</title>
-  <link rel="stylesheet" href="/main/style.css">
-  <link rel="stylesheet" href="/main/style2.css">
-  <!-- <link rel="stylesheet" href="project.css"> -->
-  <link rel="stylesheet" href="/probout/probout.css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>All Projects - Jatin Sharma</title>
+      <link rel="stylesheet" href="/main/style.css">
+      <link rel="stylesheet" href="/main/style2.css">
+      <!-- <link rel="stylesheet" href="project.css"> -->
+      <link rel="stylesheet" href="/probout/probout.css">
+      <link rel="stylesheet" href="page1.css">
+      <link rel="stylesheet" href="page2.css">
 </head>
 
 <body>
-  <div class="container">
-    <!-- ✅ Navbar placeholder -->
-    <div id="navbar-placeholder"></div>
+      <div class="containers">
+            <!-- ✅ Navbar placeholder -->
+            <div id="navbar-placeholder"></div>
 
-    <!-- ✅ Page-specific content -->
- 
+            <!-- ✅ Page-specific content -->
+            <section class="blog-post">
+
+                  <!-- Cover Image -->
+                  <div class="blog-cover">
+                        <img class="tailwindimage"
+                              src="https://www.shivamworks.tech/_next/image?url=%2Fnextjs-vs-react.png&w=1080&q=75"
+                              alt="Tailwind CSS">
+                  </div>
+
+                  <!-- Blog Content -->
+                  <h1 class="blog-title">Why Choose Next.js Over React.js: The Complete Developer's Guide</h1>
+
+                  <p class="blog-intro">
+
+                        When building modern web applications, developers often choose between React.js and Next.js.
+                        While React.js is a powerful UI library, Next.js is a comprehensive framework built on top of
+                        React that provides additional production-ready features out of the box.
+                  </p>
+
+                  <!-- Section -->
+
+                  <div class="one">
+                        <h2>What's the Difference?</h2>
+                        <h3>
+                              <b>React.js </b> is a JavaScript library for building user interfaces, focused on
+                              component-based architecture for creating interactive UIs.
+                        </h3>
+
+                        <h3>
+                              <b>Next.js </b>is a React framework that adds server-side rendering, static site
+                              generation, API
+                              routes, and many other production-ready features.
+                        </h3>
+                  </div>
+
+
+                  <h2>Key Advantages of Next.js</h2>
+                  <h3>1. Server-Side Rendering & Static Generation</h3>
+                  <p>Next.js offers built-in SSR and SSG for better performance and SEO:</p>
+
+                  <pre><code>
+
+
+
+// Static Site Generation
+export async function getStaticProps() {
+  const posts = await fetchPosts()
+  
+  return {
+    props: { posts },
+    revalidate: 60 // Regenerate every 60 seconds
+  }
+}
+
+export default function BlogPage({ posts }) {
+  return (
+   &lt;div&gt;
+  {posts.map(post =&gt; (
+    &lt;article key={post.id}&gt;
+      &lt;h2&gt;{post.title}&lt;/h2&gt;
+      &lt;p&gt;{post.excerpt}&lt;/p&gt;
+    &lt;/article&gt;
+  ))}
+&lt;/div&gt;
+
+  )
+}
+
+      </code></pre>
 
 
 
 
+                  <h3>Benefits:</h3>
+                  <ul>
+                        <li>Better SEO with pre-rendered content</li>
+                        <li>Faster initial page loads</li>
+                        <li>Improved Core Web Vitals</li>
+                        <li>Social media sharing support</li>
+                  </ul>
+
+                  <pre><code>
+                        
+      </code></pre>
+
+
+<div class="two">
+      <h2>2. File-Based Routing</h2>
+      <h3>Intuitive routing without configuration:</h3>
+
+      <pre><code>
+ pages/
+  index.js          → /
+  about.js          → /about
+  blog/
+   [slug].js       → /blog/:slug
+ api/
+   users.js        → /api/users
+            </code></pre>
+            
+
+                  <h2>3. Built-in API Routes</h2>
+                  <h3>Create backend endpoints within your app:</h3>
+                  
+      <pre><code>
+// pages/api/users.ts
+ export default async function handler(req, res) {
+   if (req.method === 'GET') {
+     const users = await fetchUsers()
+     res.status(200).json(users)
+  }
+ }
+             </code></pre>
+
+                  <h2>4. Automatic Optimizations</h2>
+             <div class="three">
+                  <ul>
+                        <li>Code splitting and bundle optimization</li>
+                        <li>Image optimization with..  
+                              <b>next/image</b>  </li>
+                        <li>Font optimization </li>
+                        <li>Automatic prefetching</li>
+                  </ul>
+
+
+                  <h2>5. Enhanced Developer Experience</h2>
+                       <ul>
+                             <li>Fast refresh with state preservation</li>
+                             <li>Built-in TypeScript support  </li>
+                             <li>Comprehensive error reporting </li>
+                             <li>Zero configuration setup </li>
+                       </ul>
+
+                       <h2>Performance Comparison </h2>
+                       <h2>React.js SPA</h2>
+                       <ul>
+                             <li>First Contentful Paint: ~2.5s</li>
+                             <li>Time to Interactive: ~3.2s </li>
+                             <li>SEO Score: Poor (requires additional setup) </li>
+                             <li>Bundle Size: Larger initial bundle</li>
+                       </ul>
+            </div>
+
+                  <h2>Migration Strategy </h2>
+                  <h3>Moving from React.js to Next.js:</h3>
+                  <pre><code>
+
+
+&lt;!-- Display --&gt;
+&lt;div class="block"&gt;Block element&lt;/div&gt;
+&lt;div class="inline-block"&gt;Inline-block element&lt;/div&gt;
+&lt;div class="flex"&gt;Flexbox container&lt;/div&gt;
+&lt;div class="grid"&gt;Grid container&lt;/div&gt;
+&lt;div class="hidden"&gt;Hidden element&lt;/div&gt;
+      </code></pre>
+
+                  <h1>Core Utility Classes</h1>
+                  <h3>Layout Classes</h3>
+                  <pre><code>
+        Display
+&lt;div class="block">Block element&lt;/div&gt;
+&lt;div class="inline-block">Inline-block element&lt;/div&gt;
+&lt;div class="flex">Flexbox container&lt;/div&gt;
+&lt;div class="grid">Grid container&lt;/div&gt;
+&lt;div class="hidden">Hidden element&lt;/div&gt;
+
+&lt;!-- Positioning --&gt;
+&lt;div class="relative"&gt;Relative positioning&lt;/div&gt;
+&lt;div class="absolute top-0 left-0"&gt;Absolute positioning&lt;/div&gt;
+&lt;div class="fixed bottom-4 right-4"&gt;Fixed positioning&lt;/div&gt;
+      </code></pre>
+
+
+                  <h1>Flexbox Classes</h1>
+                  <!-- <h3>Layout Classes</h3> -->
+                  <pre><code>
+        
+&lt;div class="flex justify-center items-center h-screen"&gt;
+&lt;div class="bg-blue-500 text-white p-4">Centered content"&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Flex Direction --&gt;
+&lt;div class="flex flex-col">Vertical Layout&lt;/div&gt;
+&lt;div class="flex flex-row">Horizontal layout&lt;/div&gt;
     
-    
+&lt;!-- Flex Wrap --&gt;
+
+&lt;div class="flex flex-wrap">Wrapping items&lt;/div&gt;
+&lt;div class="flex flex-nowrap">No wrapping&lt;/div&gt;
+      </code></pre>
 
 
-  </div>
 
-  <!-- ✅ Script to inject navbar -->
-  <script src="/navbar/navbar.js"></script>
+
+                  <h1>Typography</h1>
+                  <h3>Text Styling</h3>
+                  <pre><code>
+<!-- Font Size -->
+
+&lt;h1 class="text-4xl">Extra large heading&lt;/h1
+h2 class="text-2xl">Large heading&lt;/h2
+p class="text-base">Normal text&lt;/p
+small class="text-sm">Small text&lt;/small
+
+&lt;!-- Font Weight --&gt;
+&lt;p class="font-light">Light text&lt;/p&gt;
+&lt;p class="font-normal">Normal text&lt;/p&gt;
+&lt;p class="font-semibold">Semi-bold text&lt;/p&gt;
+&lt;p class="font-bold">Bold text&lt;/p&gt;
+
+&lt;!-- Text Color --&gt;
+&lt;p class="text-gray-900">Dark text&lt;/p&gt;
+&lt;p class="text-blue-500">Blue text&lt;/p&gt;
+&lt;p class="text-red-600">Red text&lt;/p&gt;
+
+&lt;!-- Text Alignment --&gt;
+&lt;p class="text-left">Left aligned&lt;/p&gt;
+&lt;p class="text-center">Center aligned&lt;/p&gt;
+&lt;p class="text-right">Right aligned&lt;/p&gt;
+      </code></pre>
+
+
+                  <h3>Conclusion</h3>
+                  <p>Tailwind CSS offers a powerful utility-first approach to styling that can significantly speed up
+                        your development process. By composing styles from utility classes, you can:</p>
+
+                  <ul>
+                        <li> Faster Development - No need to write custom CSS </li>
+                        <li> Consistent Design - Built-in design system </li>
+                        <li>Responsive by Default - Mobile-first approach </li>
+                        <li>Highly Customizable - Easy to extend and modify </li>
+                        <li>Small Bundle Size - Only includes used classes </li>
+                  </ul>
+      </div>
+            </section>
+      </div>
+
+      <!-- ✅ Script to inject navbar -->
+      <script src="/navbar/navbar.js"></script>
 </body>
 
 </html>

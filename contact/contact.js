@@ -3,7 +3,7 @@
 // ===============================
 document.addEventListener("DOMContentLoaded", function () {
     // Initialize EmailJS
-    emailjs.init("NKwdRkVcolYVYYuqZ"); // <-- Replace with your Public Key
+    emailjs.init("NKwdRkVcolYVYYuqZ"); // <-- yaha apni public key likho
 
     const contactForm = document.getElementById("contactForm");
 
@@ -32,11 +32,11 @@ function handleFormSubmit(e) {
 
         // Send email via EmailJS
         emailjs.send(
-            "service_ezsjhjs",
-            "template_btar67h",  // <-- Replace with your Template ID
+            "service_ezsjhjs",   // <-- yaha service id
+            "template_btar67h",  // <-- yaha template id
             {
                 from_name: formObject.name,
-                from_email: formObject.email,  // This will also be used as Reply-To
+                from_email: formObject.email,  // Reply-To
                 subject: formObject.subject,
                 message: formObject.message
             }
@@ -172,3 +172,5 @@ function handleSmoothScroll(e) {
         if (targetElement) targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 }
+
+
