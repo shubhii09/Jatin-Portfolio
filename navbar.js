@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbarPlaceholder = document.getElementById("navbar-placeholder");
 
   if (navbarPlaceholder) {
-    fetch("/navbar/navbar.html") // loads your navbar file
+    fetch("/navbar.html") // loads your navbar file
       .then(response => response.text())
       .then(data => {
         navbarPlaceholder.innerHTML = data;
